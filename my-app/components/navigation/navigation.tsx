@@ -1,5 +1,5 @@
 'use client';
-import React, { CSSProperties, memo, useCallback } from 'react';
+import React, { memo, useCallback } from 'react';
 import { Qoan } from '../base';
 import { NavigationProps } from '@/src/types';
 import { navigationStyle } from '@/src/style';

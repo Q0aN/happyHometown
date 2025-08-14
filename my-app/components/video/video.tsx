@@ -1,5 +1,5 @@
 
-import React, { CSSProperties, memo } from 'react';
+import React, { memo } from 'react';
 import { Qoan } from '../base';
 import { VideoProps } from '@/src/types';
 

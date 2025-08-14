@@ -5,7 +5,7 @@ export interface QoanProps {
     children?: React.ReactNode;
     style?: React.CSSProperties;
     className?: string;
-    onClick?: any;
+    onClick?: React.MouseEventHandler<HTMLDivElement>;
 }
 
 export const Qoan = memo(function Qoan(props: QoanProps) {

@@ -1,35 +1,24 @@
 'use client';
 
-import { useState } from 'react';
-import Link from 'next/link';
+import React, { createContext, useContext, useState } from 'react';
 import { Navigation } from '@/components/navigation';
 import { Qoan } from '@/components/base';
 import { navigationItems } from '@/src/info';
 
-export default function Layout({children}) {
+const TabContext = createContext<string>('');
+
+export default function Layout({ children }: { children: React.ReactNode }) {
     const [activeTab, setActiveTab] = useState('00170001');
 
     return (
         <Qoan>
-            <Navigation items={navigationItems} selected={activeTab} onSelected={setActiveTab}>
-
-            </Navigation>
-
-            <main>
-                {/* {activeTab === '00170001' && <HomeContent />} */}
-                {children}
-            </main>
+            <TabContext.Provider value={activeTab}>
+                <Navigation items={navigationItems} selected={activeTab} onSelected={setActiveTab} />
+                <main>{children}</main>
+            </TabContext.Provider>
         </Qoan>
     );
 }
-function HomeContent() {
-    return <div>这是首页内容</div>;
-}
-
-function AboutContent() {
-    return <div>这是关于页面内容</div>;
-}
-
-function ContactContent() {
-    return <div>这是联系页面内容</div>;
+export function useActiveTab() {
+    return useContext(TabContext);
 }
