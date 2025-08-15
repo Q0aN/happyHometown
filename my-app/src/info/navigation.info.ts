@@ -1,12 +1,12 @@
-import { NavigationPropsItem } from "../types";
+import { NavigationItemProps } from "../types";
 
-export const navigationItems:NavigationPropsItem[] = [
+export const navigationItems:NavigationItemProps[] = [
     {
-        id:'00170001',
+        id:'17000001',
         name:'首页'
     },
     {
-        id:'00170002',
+        id:'17000002',
         name:'其他'
     }
 ]
