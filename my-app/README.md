@@ -22,7 +22,7 @@ public层用于存放静态资源例如图片、svg、txt
 #### src(核心功能层)
 info目录用于定义项目中会使用到的参数
 
-script目录用于存放app层和components层剥离出的逻辑代码，保证ui层的
+script目录用于存放app层和components层剥离出的逻辑代码，保证ui层的纯洁性
 
 style目录用于存放app层和components层的样式，便于管理与调整，后期将统一定义颜色、字体、字号等元素，便于主题的切换
 

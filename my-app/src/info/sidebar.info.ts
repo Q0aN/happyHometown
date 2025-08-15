@@ -4,7 +4,7 @@ export const sidebarItems:SideBarItemProps[] = [
     {
         id:'18010001',
         name:'菜单一',
-        children:[
+        childrenInfo:[
             {
                 id:'18020101',
                 name:'子菜单一',
@@ -12,7 +12,7 @@ export const sidebarItems:SideBarItemProps[] = [
             {
                 id:'18020102',
                 name:'子菜单二',
-                children:[
+                childrenInfo:[
                     {
                         id:'18130201',
                         name:'孙菜单一'
