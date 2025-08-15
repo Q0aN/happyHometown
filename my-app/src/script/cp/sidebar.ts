@@ -11,7 +11,7 @@ export const getStyle = (item: SideBarItemProps) => {
     } else if (key === '3') {
         style += sidebarStyle.item3
     }
-    if (item.id === item.selected && !item.children) {
+    if (item.id === item.selected && !item.childrenInfo) {
         style += sidebarStyle.selected
     }
     return style

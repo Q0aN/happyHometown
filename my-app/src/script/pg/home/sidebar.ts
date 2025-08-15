@@ -9,10 +9,10 @@ export const updateSidebarItem = (
     if (item.id === id) {
       return { ...item, isOpened: !item.isOpened };
     }
-    if (item.children && item.children.length > 0) {
+    if (item.childrenInfo && item.childrenInfo.length > 0) {
       return {
         ...item,
-        children: updateSidebarItem(item.children, id),
+        childrenInfo: updateSidebarItem(item.childrenInfo, id),
       };
     }
 
