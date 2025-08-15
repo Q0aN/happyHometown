@@ -1,1 +1,2 @@
-export * from './navigation'
+export * from './navigation.info'
+export * from './app.info'

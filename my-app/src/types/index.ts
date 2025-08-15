@@ -1,1 +1,2 @@
-export * from './components'
+export * from './components.type'
+export * from './page.type'
