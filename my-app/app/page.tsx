@@ -85,7 +85,7 @@ export default memo(function CharacterRainPage() {
         cancelAnimationFrame(animationIdRef.current)
       }
     }
-  }, [acknowledgmentsList, mousePos])
+  }, [mousePos])
 
   return (
     <Qoan className={appPageStyle.base}>

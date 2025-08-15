@@ -21,7 +21,7 @@ export const SideBar = memo(function SideBar(props: SideBarProps) {
             {
                 items?.map((item) => {
                     return (
-                        <SideBarItem onPress={onClick} key={item.id} id={item.id} name={item.name} isOpened={item.isOpened} children={item.children} selected={selected} />
+                        <SideBarItem onPress={onClick} key={item.id} id={item.id} name={item.name} isOpened={item.isOpened} childrenInfo={item.childrenInfo} selected={selected} />
                     )
                 })
             }

@@ -9,7 +9,7 @@ export const SideBarItem = memo(function SideBarItem(props: SideBarItemProps) {
         name,
         id,
         isOpened,
-        children,
+        childrenInfo,
         selected,
         onPress
     } = props;
@@ -23,8 +23,8 @@ export const SideBarItem = memo(function SideBarItem(props: SideBarItemProps) {
                 }}
             >{name}</Qoan>
 
-            {isOpened && children && children.map((child) => (
-                <SideBarItem key={child.id} id={child.id} name={child.name} isOpened={child.isOpened} children={child.children} onPress={onPress} selected={selected} />
+            {isOpened && childrenInfo && childrenInfo.map((child) => (
+                <SideBarItem key={child.id} id={child.id} name={child.name} isOpened={child.isOpened} childrenInfo={child.childrenInfo} onPress={onPress} selected={selected} />
             ))
             }
         </Qoan>

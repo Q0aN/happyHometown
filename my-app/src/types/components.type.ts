@@ -17,7 +17,7 @@ export interface SideBarItemProps {
     id: string,
     name: string,
     isOpened?: boolean,
-    children?: SideBarItemProps[],
+    childrenInfo?: SideBarItemProps[],
     onPress?: (id: string) => void,
     selected?: string
 }
