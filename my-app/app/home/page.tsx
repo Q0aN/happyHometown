@@ -201,25 +201,25 @@ const OtherPage = () => {
   const [isDragging, setIsDragging] = useState(false);
 
   // 处理拖放区域的高亮显示
-  const handleDragEnter = useCallback((e) => {
+  const handleDragEnter = useCallback((e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
     e.stopPropagation();
     setIsDragging(true);
   }, []);
 
-  const handleDragLeave = useCallback((e) => {
+  const handleDragLeave = useCallback((e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
     e.stopPropagation();
     setIsDragging(false);
   }, []);
 
-  const handleDragOver = useCallback((e) => {
+  const handleDragOver = useCallback((e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
     e.stopPropagation();
   }, []);
 
   // 处理文件放置
-  const handleDrop = useCallback((e) => {
+  const handleDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
     e.stopPropagation();
     setIsDragging(false);
@@ -231,15 +231,17 @@ const OtherPage = () => {
   }, []);
 
   // 处理文件选择
-  const handleFileSelect = (e) => {
-    const files = e.target.files;
+  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files:FileList | null = e.target.files;
+    if(!files)
+      return;
     if (files.length) {
       handleFiles(files);
     }
   };
 
   // 读取文件内容
-  const handleFiles = async (files) => {
+  const handleFiles = async (files:FileList) => {
     const file = files[0];
     setFileName(file.name);
     const info = await BinaryFileHandler.readFile(file)

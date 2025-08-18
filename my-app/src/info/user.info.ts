@@ -1,4 +1,7 @@
+interface User{
+    name? : string
+}
 
-export const user = {
+export const user:User = {
     // name:'qoan'
 }
