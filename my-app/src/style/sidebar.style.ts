@@ -1,4 +1,4 @@
-const sidebarBase = 'w-64 bg-gray-50 p-4 border-r border-gray-200 shadow-sm'
+const sidebarBase = 'min-w-64 bg-gray-50 p-4 border-r border-gray-200 shadow-sm'
 const sidebarItemSelected = `
   bg-[linear-gradient(135deg,hsl(0,100%,80%),hsl(30,100%,90%),hsl(330,100%,90%))]
   animate-[hueRotate_15s_linear_infinite,flow_8s_ease_infinite]

@@ -1,0 +1,25 @@
+{
+  "name": "qoan",
+  "version": "1.0.0",
+  "description": "1700xxxx 导航相关",
+  "main": "index.js",
+  "scripts": {
+    "create": "node src/Compile/create.js",
+    "read": "node src/Compile/read.js",
+    "test": "node test.js"
+  },
+  "type": "module",
+  "compilerOptions": {
+    "module": "ESNext"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^24.0.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "crc-32": "^1.2.2"
+  }
+}
