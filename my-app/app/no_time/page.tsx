@@ -32,12 +32,15 @@ export default function PomodoroTimer() {
                             setTimerType(null)
                             return 0
                         }
+                        document.title = formatTime(newSeconds);
                         return newSeconds
                     } else {
                         // 正向计时逻辑
+                        document.title = formatTime(prev + 1);
                         return prev + 1
                     }
                 })
+
             }, 1000)
         } else {
             if (intervalRef.current) {
@@ -49,6 +52,8 @@ export default function PomodoroTimer() {
             if (intervalRef.current) {
                 clearInterval(intervalRef.current)
             }
+            document.title = '妙妙屋';
+
         }
     }, [isRunning, timerType, pomodoroTime])
 

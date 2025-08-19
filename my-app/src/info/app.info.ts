@@ -12,7 +12,9 @@ export const acknowledgmentsList = [
     "next.js",
     "REACT",
     "秋阳",
-    "大帅哥翟秋阳"
+    "大帅哥翟秋阳",
+    "吴程昊",
+    "吴大儿"
 ];
 export const dropColors = [
     'rgba(99, 179, 237, {opacity})',     // 天蓝色
